@@ -1,12 +1,6 @@
 ## 參考網站
 http://t20301sses.blogspot.tw/2016/02/ova.html
 
-## export OS to .ova
-https://github.com/jim0409/-Linux-brabrabra/issues/3#issuecomment-330139568
-
-## import .ova
-https://github.com/jim0409/-Linux-brabrabra/issues/3#issuecomment-330139593
-
 > 備註1. VirtualBox的ova檔無法直接與VMware共用。這邊是在vSphere上建立ova檔。
 > 備註2. 安裝vm如果無法直接ssh可以嘗試安裝 apt-get install openssh-server
 > 備註3. 安裝vm之iso檔上傳流程 vSphere > Inventory > Summary > Storage > [right click] upload file
