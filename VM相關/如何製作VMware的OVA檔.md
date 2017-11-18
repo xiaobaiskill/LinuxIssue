@@ -1,5 +1,5 @@
 ## 參考網站
-http://t20301sses.blogspot.tw/2016/02/ova.html
+> http://t20301sses.blogspot.tw/2016/02/ova.html
 
 > 備註1. VirtualBox的ova檔無法直接與VMware共用。這邊是在vSphere上建立ova檔。
 > 備註2. 安裝vm如果無法直接ssh可以嘗試安裝 apt-get install openssh-server
