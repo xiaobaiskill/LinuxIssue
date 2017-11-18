@@ -12,7 +12,7 @@ https://www.maketecheasier.com/import-export-ova-files-in-virtualbox/
 ![2017-09-18 11 24 28](https://user-images.githubusercontent.com/22232508/30528519-66da14dc-9c66-11e7-9957-bcbbcb081089.png)
 
 
-
+## import .ova to OS
 1. 從file點選Import Appliance
 ![importova](https://user-images.githubusercontent.com/22232508/30528350-bff080bc-9c64-11e7-92bb-5aa28ddfbdde.png)
 2. 選擇要import的file的檔案位置
