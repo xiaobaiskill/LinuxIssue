@@ -2,6 +2,7 @@
 http://rocksaying.tw/archives/11239791.html
 
 ## 製作deb檔架構 (這邊我做了一個testdb資料夾下面放了DEBIAN & usr兩個資料夾)
+```
 ubuntu@ubuntu:~/DebTest/testdb$ tree
 .
 ├── DEBIAN
@@ -9,7 +10,7 @@ ubuntu@ubuntu:~/DebTest/testdb$ tree
 └── usr
     └── bin
         └── hellJim
-
+```
 ## control文件檔
 control為一個可編輯文件, 需要涵括一些資訊如下;
 > Package: 套件的名稱，在系統中必須是唯一的代號，慣例上用英文小寫與「-」組成
