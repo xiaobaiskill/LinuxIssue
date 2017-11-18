@@ -2,13 +2,6 @@
 https://www.maketecheasier.com/import-export-ova-files-in-virtualbox/
 
 ## export OS to .ova
-
-## import .ova
-
-
-
-
-## export OS to .ova
 1. 選擇file Export Appliance
 ![2017-09-18 11 23 23](https://user-images.githubusercontent.com/22232508/30528496-209bc4f2-9c66-11e7-89fa-281dd50290e1.png)
 2. 勾選要製作成ova的virtual machine（注意：該台VM必須為poweroff狀態）
