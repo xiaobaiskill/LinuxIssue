@@ -2,10 +2,8 @@
 https://www.maketecheasier.com/import-export-ova-files-in-virtualbox/
 
 ## export OS to .ova
-https://github.com/jim0409/-Linux-brabrabra/issues/2#issuecomment-330124523
 
 ## import .ova
-https://github.com/jim0409/-Linux-brabrabra/issues/2#issuecomment-330124574
 
 
 
