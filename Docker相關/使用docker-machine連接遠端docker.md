@@ -27,3 +27,9 @@ export DOCKER_MACHINE_NAME="remote-docker-host"
 # Run this command to configure your shell: 
 # eval $(docker-machine env remote-docker-host)
 要執行遠端連線，只要執行 eval $(docker-machine env remote-docker-host) 即可
+
+- 備註:
+1. generice是driver的固定參數，不需更換!
+2. {ip-address}要換成要remote host端的ip
+3. “%localappdata%/lxss/home/{bash-username}/.ssh/id_rsa" 要改成自己放置key的資料夾；e.g. "/Users/mac/ .ssh/id_rsa"
+4. reference : http://www.kevinkuszyk.com/2016/11/28/connect-your-docker-client-to-a-remote-docker-host/
