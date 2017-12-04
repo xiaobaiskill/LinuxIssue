@@ -20,12 +20,14 @@ docker-mahcine remote-docker-host建立流程
 
 
 確定建立完畢後輸入Docker-machine env {remote-docker-host} 可以看到docker-machine的環境變數
+```
 export DOCKER_TLS_VERIFY="1"
 export DOCKER_HOST="tcp://172.31.86.190:2376"
 export DOCKER_CERT_PATH="/Users/mac/.docker/machine/machines/remote-docker-host"
 export DOCKER_MACHINE_NAME="remote-docker-host"
 # Run this command to configure your shell: 
 # eval $(docker-machine env remote-docker-host)
+```
 要執行遠端連線，只要執行 eval $(docker-machine env remote-docker-host) 即可
 
 - 備註:
