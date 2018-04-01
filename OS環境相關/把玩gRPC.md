@@ -1,5 +1,6 @@
 ##### 在此會簡單介紹proto編寫的一些規定，至於為何要用.proto而不用xml在此不多做贅述;可參考下連結Working with Protocol Buffers
 > https://grpc.io/docs/guides/
+> 以下文本範例主要是參照網頁https://developers.google.com/protocol-buffers/docs/proto3，如有不清楚或錯誤之處還煩請提出！感謝～
 
 ##### proto2 vs proto3
 > 官方建議使用proto3避免未來會有proto3版本不接納proto2的版本問題，所以必須在.proto file的第一段加上
@@ -7,6 +8,19 @@
 syntax = "proto3";
 ```
 
+##### .proto 檔宣告變數
+> 變數以enum的方法進行宣告，宣告一個變數（不論類別）即必須給予一個對應的數字~
+```
+e.g.
+message SearchRequest {
+  string query = 1;
+  int32 page_number = 2;
+  int32 result_per_page = 3;
+}
+```
+> 可參照enum的用法：https://developers.google.com/protocol-buffers/docs/proto3#enum
+
+##### 後續
 ```
 ... to be continued!
 ```
