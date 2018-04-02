@@ -1,3 +1,6 @@
+## 以golang實做gRPC server以及client
+
+### 介紹
 ##### 在此會簡單介紹proto編寫的一些規定，至於為何要用.proto而不用xml在此不多做贅述;可參考下連結Working with Protocol Buffers
 > https://grpc.io/docs/guides/ ; 以下文本範例主要是參照網頁https://developers.google.com/protocol-buffers/docs/proto3，如有不清楚或錯誤之處還煩請提出！感謝～
 
@@ -79,7 +82,7 @@ message Result {
 ... to be continued!
 ```
 
-
+### 實做
 ##### 基礎範例，使用go語言從.proto file到實做（此處不解釋如何編譯proto.file)
 1. 定義一個.proto file
 2. 使用proto buffer complier (需要先下載proto3，可參考：https://gist.github.com/sofyanhadia/37787e5ed098c97919b8c593f0ec44d8)
