@@ -19,6 +19,10 @@ message SearchRequest {
 ```
 > 可參照enum的用法：https://developers.google.com/protocol-buffers/docs/proto3#enum
 
+##### 如何在.proto檔案中加入註解
+> 如同C/C++的形式，使用'//'或'/* ... */'來做註解
+
+
 ##### 後續
 ```
 ... to be continued!
