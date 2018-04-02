@@ -22,6 +22,31 @@ message SearchRequest {
 }
 ```
 
+##### repeated用法;(support proto2 only required/ optional) 
+> repeated: 表示這個變數名稱可能會在該.proto檔內被使用多次。
+```
+// 使用SearchResponse內含有使用Result這個結構的results;results可能在被轉為.pb.go後被大量使用。
+message SearchResponse {
+  repeated Result results = 1;
+}
+
+message Result {
+  string url = 1;
+  string title = 2;
+  repeated string snippets = 3;
+}
+```
+> 同上，巢狀架構寫法
+```
+message SearchResponse {
+  message Result {
+    string url = 1;
+    string title = 2;
+    repeated string snippets = 3;
+  }
+  repeated Result results = 1;
+}
+```
 ##### 透過.proto檔在.pb.go(IDL)裡面宣告一個enum變數
 > 可參照enum的用法：https://developers.google.com/protocol-buffers/docs/proto3#enum
 ```
