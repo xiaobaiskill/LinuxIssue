@@ -70,11 +70,11 @@ service class_interface{
 ```
 // 類型1.simple RPC
 rpc NeededMethod(InputPtr) returns (OutputFeature) {}
-// 類型2.server端streaming RPC;當client端送request給server端時需要從server端拿到response用
+// 類型2.server端streaming RPC;
 rpc ListFeatures(Rectangle) returns (stream Feature) {}
-// 類型3.client端streaming RPC;當server端傳送給client端資料結束後，需要從client端拿到資料已經傳送完畢的資訊。
+// 類型3.client端streaming RPC
 rpc RecordRoute(stream Point) returns (TrouteSummary) {}
-// 類型4.雙向streaming RPC;當server端以及client端都有傳送資料需求
+// 類型4.雙向streaming RPC;
 rpc RouteChat(stream RouteNote) returns (stream RouteNode) {}
 ```
 > reference : https://grpc.io/docs/tutorials/basic/go.html
@@ -110,6 +110,8 @@ message Result {
 - 備註 1. '.' 是代表檔案位置，此處我是移動放置.proto資料夾內執行該行指令。 
 - 備註 2. 'helloworld.proto' 請換成對應的proto檔
 - 備註 3. 'go_out=plugins=grpc:' 為固定用法，其旨是要把.proto file轉成.go檔
+- 備註 4. .proto檔可以import其他package，在使用protoc轉檔時可另外加-I將import的package路徑加入。
+(https://developers.google.com/protocol-buffers/docs/proto3#importing-definitions)
 4. 開兩個資料夾，分別命名為server以及client並且在裡面放置main.go作為執行時使用。
 5. 定義好server/main.go，執行可以帶起一個server。(保持running)
 6. 定義好client/main.go，執行可以得之前定義好的method所對應的response
