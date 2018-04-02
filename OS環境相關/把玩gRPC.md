@@ -7,8 +7,9 @@
 syntax = "proto3";
 ```
 
-##### .proto 檔宣告變數
+##### 透過.proto 檔在pb.go(IDL)宣告一個變數
 > 變數以enum的方法進行宣告，宣告一個變數（不論類別）即必須給予一個對應的數字~
+> 使用的變數型別(int32, int64, string, ...)請參照：https://developers.google.com/protocol-buffers/docs/proto3#scalar
 ```
 e.g.
 message SearchRequest {
@@ -17,13 +18,16 @@ message SearchRequest {
   int32 result_per_page = 3;
 }
 ```
+
+##### 透過.proto檔在.pb.go(IDL)裡面宣告一個enum變數
 > 可參照enum的用法：https://developers.google.com/protocol-buffers/docs/proto3#enum
+
 
 ##### 如何在.proto檔案中加入註解
 > 如同C/C++的形式，使用'//'或'/* ... */'來做註解
 
 
-##### 後續
+##### 後續想到補充會繼續寫
 ```
 ... to be continued!
 ```
