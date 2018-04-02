@@ -45,15 +45,31 @@ message SearchRequest {
 enum EnumAllowingAlias {
   // 使用預設的參數allow_alias並選擇true 
   option allow_alias = true;
-  UNKNOWN = 0;  <- 重複使用
-  STARTED = 1;  <- 重複使用
+  UNKNOWN = 0;  // <- 重複使用
+  STARTED = 1;  // <- 重複使用
   RUNNING = 1;
 }
 enum EnumNotAllowingAlias {
-  UNKNOWN = 0;  <- 重複使用
-  STARTED = 1;  <- 重複使用
+  UNKNOWN = 0;  // <- 重複使用
+  STARTED = 1;  // <- 重複使用
 }
 ```
+> 針對go語言如何轉換成實際要用的變數可以參考，https://developers.google.com/protocol-buffers/docs/reference/go-generated#singular-scalar-proto3
+
+##### 在.proto 檔實現structue概念
+> 先宣告一個message並且賦予其一定的變數，在使用令一個message承接上一個message所使用的物件。
+```
+message SearchResponse {
+  repeated Result results = 1;
+}
+
+message Result {
+  string url = 1;
+  string title = 2;
+  repeated string snippets = 3;
+}
+```
+
 ##### 如何在.proto檔案中加入註解
 > 如同C/C++的形式，使用'//'或'/* ... */'來做註解
 
