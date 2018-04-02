@@ -70,11 +70,18 @@ service class_interface{
 ```
 // 類型1.simple RPC;client端用該method詢問server得到response後結束該method
 rpc NeededMethod(InputPtr) returns (OutputFeature) {}
-// 類型2.server端streaming RPC;client端使用該method詢問server端得到一個stream，client可以藉由這個stream讀取數據直到沒有數據可讀。
+
+// 類型2.server端streaming RPC;client端使用該method詢問server端得到一個stream，
+// client可以藉由這個stream讀取數據直到沒有數據可讀。
 rpc ListFeatures(Rectangle) returns (stream Feature) {}
-// 類型3.client端streaming RPC;client端使用一個stream將一系列數據發送給server端，直至client端將數據發送完畢後server端會反饋一個完畢訊息。
+
+// 類型3.client端streaming RPC;client端使用一個stream將一系列數據發送給server端，
+// 直至client端將數據發送完畢後server端會反饋一個完畢訊息。
 rpc RecordRoute(stream Point) returns (TrouteSummary) {}
-// 類型4.雙向streaming RPC;client端以及server端彼此兩邊透過讀寫流(read-write stream)向對方發送一系列訊息。兩邊的stream都是獨立的，所以client端和server端可以隨意地進行讀寫操作;例如client端
+
+// 類型4.雙向streaming RPC;client端以及server端彼此兩邊透過讀寫流(read-write stream)向對方發送一系列訊息。
+// 兩邊的stream都是獨立的，所以client端和server端可以隨意地進行讀寫操作;
+// 例如server端可以等待client端的數據都接收完畢後再回饋response給client裡寫數據。反之亦然。
 rpc RouteChat(stream RouteNote) returns (stream RouteNode) {}
 ```
 > reference : https://grpc.io/docs/tutorials/basic/go.html
