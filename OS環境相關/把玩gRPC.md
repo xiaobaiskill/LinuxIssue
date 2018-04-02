@@ -21,8 +21,39 @@ message SearchRequest {
 
 ##### 透過.proto檔在.pb.go(IDL)裡面宣告一個enum變數
 > 可參照enum的用法：https://developers.google.com/protocol-buffers/docs/proto3#enum
-
-
+```
+message SearchRequest {
+  string query = 1;
+  int32 page_number = 2;
+  int32 result_per_page = 3;
+  // enum 為資料型別;Corpus 為變數名稱
+  enum Corpus {
+    UNIVERSAL = 0;
+    WEB = 1;
+    IMAGES = 2;
+    LOCAL = 3;
+    NEWS = 4;
+    PRODUCTS = 5;
+    VIDEO = 6;
+  }
+  // 需要額外在enum 外定義資料結構為Corpus的變數corpus好讓SearRequest這個資料結構可以看到Corpus變數
+  Corpus corpus = 4;
+}
+```
+> 如何在enum中使用重複的變數名稱
+```
+enum EnumAllowingAlias {
+  // 使用預設的參數allow_alias並選擇true 
+  option allow_alias = true;
+  UNKNOWN = 0;  <- 重複使用
+  STARTED = 1;  <- 重複使用
+  RUNNING = 1;
+}
+enum EnumNotAllowingAlias {
+  UNKNOWN = 0;  <- 重複使用
+  STARTED = 1;  <- 重複使用
+}
+```
 ##### 如何在.proto檔案中加入註解
 > 如同C/C++的形式，使用'//'或'/* ... */'來做註解
 
