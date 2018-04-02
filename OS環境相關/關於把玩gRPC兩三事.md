@@ -59,6 +59,26 @@ enum EnumNotAllowingAlias {
 ```
 > 針對go語言如何轉換成實際要用的變數可以參考，https://developers.google.com/protocol-buffers/docs/reference/go-generated#singular-scalar-proto3
 
+##### 在.proto 檔宣告可能會用到的interface
+> 1. 先定義出一個service
+```
+service class_interface{
+...
+}
+```
+> 2. 在service內定義出會用到methods
+```
+// 類型1.simple RPC
+rpc NeededMethod(InputPtr) returns (OutputFeature) {}
+// 類型2.server端streaming RPC;當client端送request給server端時需要從server端拿到response用
+rpc ListFeatures(Rectangle) returns (stream Feature) {}
+// 類型3.client端streaming RPC;當server端傳送給client端資料結束後，需要從client端拿到資料已經傳送完畢的資訊。
+rpc RecordRoute(stream Point) returns (TrouteSummary) {}
+// 類型4.雙向streaming RPC;當server端以及client端都有傳送資料需求
+rpc RouteChat(stream RouteNote) returns (stream RouteNode) {}
+```
+> reference : https://grpc.io/docs/tutorials/basic/go.html
+
 ##### 在.proto 檔實現structue概念
 > 先宣告一個message並且賦予其一定的變數，在使用令一個message承接上一個message所使用的物件。
 ```
