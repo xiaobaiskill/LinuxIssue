@@ -22,7 +22,7 @@ message SearchRequest {
 }
 ```
 
-##### repeated用法;(support proto2 only required/ optional) 
+##### repeated用法;(required/ optional are no longer support proto3) 
 > repeated: 表示這個變數名稱可能會在該.proto檔內被使用多次。
 ```
 // 使用SearchResponse內含有使用Result這個結構的results;results可能在被轉為.pb.go後被大量使用。
