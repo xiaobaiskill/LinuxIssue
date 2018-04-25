@@ -1,3 +1,4 @@
+內文參照網頁:https://github.com/twtrubiks/docker-jenkins-django-tutorial
 ## 這邊主要在筆記如何在user做git pull時能trigger jenkins做build
 #### 事前準備
 - 搭載一台可以讓github訪問的server，在此使用google cloud platform提供的server
