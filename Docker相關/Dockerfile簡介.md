@@ -17,7 +17,7 @@ ENTRYPOINT : 指定容器啟動後執行的命令，並且不會被 docker run �
 
 
 ### 範例
-
+```
 FROM ubuntu:16.04
 MAINTAINER jim 
 RUN apt-get update && \
@@ -28,7 +28,7 @@ RUN pip3 install -r requirements3.txt
 
 ENTRYPOINT ["/bin/bash"]
 CMD ["bash"]
-
+```
 ### 使用Dockerfile開啟一個container
 - 基本的格式為 docekr build [選項] 路徑
 指令：sudo docker build .
