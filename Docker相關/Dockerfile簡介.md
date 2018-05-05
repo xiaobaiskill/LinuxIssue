@@ -27,7 +27,7 @@ COPY ./requirements3.txt /requirements3.txt
 RUN pip3 install -r requirements3.txt
 
 ENTRYPOINT ["/bin/bash"]
-CMD ["bash"]
+# CMD ["bash"]
 ```
 ### 使用Dockerfile開啟一個container
 - 基本的格式為 docekr build [選項] 路徑
