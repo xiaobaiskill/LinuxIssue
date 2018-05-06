@@ -1,8 +1,9 @@
 ### 參考網址
-https://philipzheng.gitbooks.io/docker_practice/content/dockerfile/instructions.html
-https://bonze.tw/dockerfile簡單介紹/
+> https://philipzheng.gitbooks.io/docker_practice/content/dockerfile/instructions.html
+> https://bonze.tw/dockerfile簡單介紹/
 
 ### 名詞介紹
+```
 FROM : 開頭宣告要製造的image名稱，格式為 FROM <image>或FROM <image>:<tag>
 
 MAINTAINER : 維護者信息
@@ -14,7 +15,7 @@ CMD : 使用何種指令執行，CMD ["executable","param1","param2"] 使用 exe
 COPY : 複製本地端的 <src>（為 Dockerfile 所在目錄的相對路徑）到容器中的 <dest>
 
 ENTRYPOINT : 指定容器啟動後執行的命令，並且不會被 docker run 提供的參數覆蓋，ENTRYPOINT ["executable", "param1", "param2"]
-
+```
 
 ### 範例
 ```
