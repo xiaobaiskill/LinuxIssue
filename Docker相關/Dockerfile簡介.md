@@ -1,6 +1,6 @@
 ### 參考網址
-> https://philipzheng.gitbooks.io/docker_practice/content/dockerfile/instructions.html
-> https://bonze.tw/dockerfile簡單介紹/
+- https://philipzheng.gitbooks.io/docker_practice/content/dockerfile/instructions.html
+- https://bonze.tw/dockerfile簡單介紹/
 
 ### 名詞介紹
 ```
