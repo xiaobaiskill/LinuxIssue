@@ -18,6 +18,7 @@ ENTRYPOINT : 指定容器啟動後執行的命令，並且不會被 docker run �
 ```
 
 ### 範例
+- 1.
 ```
 FROM ubuntu:16.04
 MAINTAINER jim 
@@ -28,8 +29,30 @@ COPY ./requirements3.txt /requirements3.txt
 RUN pip3 install -r requirements3.txt
 
 ENTRYPOINT ["/bin/bash"]
-# CMD ["bash"]
+CMD ["bash"]
 ```
-### 使用Dockerfile開啟一個container
+- 2.
+```
+FROM codeception/codeceptjs
+MAINTAINER jim_weng
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+# 把該目錄位置下的檔案資料夾放入映像檔內資料夾tests位置內
+# 在這邊相當於cp -r ./CodeceptJS ----> container:~/tests
+ADD ./CodeceptJS /tests
+ENTRYPOINT ["/codecept/docker/entrypoint"]
+CMD ["bash","/codecept/docker/run.sh"]
+```
+
+### 使用Dockerfile製作一個image
 - 基本的格式為 docekr build [選項] 路徑
-指令：sudo docker build .
+指令：sudo docker build -t 映像檔名:映像檔標籤 .
+
+### 使用既有映像檔執行container
+> docker run 映像檔名:映像檔標籤 (視情況，可以決定是否要額外執行cmd)
+``
+使用範例1.Dockerfile所製作的映像檔帶起container
+-> docker run image1_name:image1_tag
+-> root@2178645:
+會以bash模式直接進入該映像檔
+```
+
