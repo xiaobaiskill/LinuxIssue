@@ -1,0 +1,11 @@
+version: "3"
+services:
+  web:
+    image:  nginx:1.13.7
+    ports:
+      - "80:80"
+    volumes:
+      # put index.html in folder html would mount into conatiner
+      - ./html:/usr/share/nginx/html
+      # put default.conf in folder conf would moutn into ...
+      - ./conf:/etc/nginx/conf.d/
