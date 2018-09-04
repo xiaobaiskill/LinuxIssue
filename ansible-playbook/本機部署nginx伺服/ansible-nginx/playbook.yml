@@ -1,0 +1,11 @@
+- name: Re-create a redis container
+  hosts: localhost
+
+  tasks:
+  -
+    docker_container:
+      name: mynginx
+      image: nginx
+      state: started
+      ports:
+        - "80:80"
