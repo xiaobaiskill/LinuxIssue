@@ -1,0 +1,5 @@
+---
+- hosts: webservers
+  roles: 
+    - web/nginx
+  tags: nginx,web 
