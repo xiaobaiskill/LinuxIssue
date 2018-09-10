@@ -7,6 +7,15 @@
 ## 建立Host Inventory(主機清單)
 
 
+## ansible一些常用指令
+
+
+
+## 使用role建置ansible的腳本概念
+
+
+
+
 ## refer:
 1. https://ansible-book.gitbooks.io/ansible-first-book/advance/inventory/zhu_ji_mu_lu_guan_li.html
 2. https://raw.githubusercontent.com/ansible/ansible/devel/examples/ansible.cfg
