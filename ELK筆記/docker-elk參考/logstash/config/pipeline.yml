@@ -1,0 +1,2 @@
+- pipeline.id: djangotopic
+  path.config: "/usr/share/logstash/cfg/django_topic.cfg"

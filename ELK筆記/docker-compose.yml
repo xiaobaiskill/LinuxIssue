@@ -1,0 +1,90 @@
+version: '2.2'
+services:
+  # elasticsearch-lb:
+  #   build:
+  #     context: elasticsearch/
+  #     args:
+  #       ELK_VERSION: $ELK_VERSION
+  #   ulimits:
+  #     memlock:
+  #       soft: -1
+  #       hard: -1
+  #   mem_limit: 1536m
+  #   volumes:
+  #     - ./elasticsearch/config/elasticsearch-lb.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+  #   environment:
+  #     # Set to 512m for production
+  #     ES_JAVA_OPTS: "-Xmx512m -Xms512m"
+  #     # Set 3 for production
+  #     ES_MIN_MASTERS: "1"
+  #   ports:
+  #     - "9200:9200"
+  #     - "9300:9300"
+  #   networks:
+  #     - elk
+
+  elasticsearch:
+    build:
+      context: elasticsearch/
+      args:
+        ELK_VERSION: $ELK_VERSION
+    # Set 3 for production
+    scale: 1
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    mem_limit: 2g
+    volumes:
+      - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - ./elasticsearch/data:/usr/share/elasticsearch/data
+    environment:
+      # Set to 512m for production
+      ES_JAVA_OPTS: "-Xmx512m -Xms512m"
+      # Set 3 for production
+      ES_MIN_MASTERS: "1"
+    ports:
+      - "9200"
+      - "9300"
+    networks:
+      - elk
+
+  logstash:
+    build:
+      context: logstash/
+      args:
+        ELK_VERSION: $ELK_VERSION
+    scale: 1
+    volumes:
+      - ./logstash/config:/usr/share/logstash/config
+      - ./logstash/pipeline:/usr/share/logstash/pipeline
+      - ./logstash/cfg:/usr/share/logstash/cfg
+    ports:
+      - "5000"
+    environment:
+      # Set to 512m for production
+      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+      KAFKA_HOST: $KAFKA_HOST
+      KAFKA_PORT: $KAFKA_PORT
+    networks:
+      - elk
+    depends_on:
+      - elasticsearch
+
+  kibana:
+    build:
+      context: kibana/
+      args:
+        ELK_VERSION: $ELK_VERSION
+    volumes:
+      - ./kibana/config:/usr/share/kibana/config
+    ports:
+      - "5601:5601"
+    networks:
+      - elk
+    depends_on:
+      - elasticsearch
+
+networks:
+  elk:
+    driver: bridge
