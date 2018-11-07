@@ -1,33 +1,17 @@
 ---
-- name: Install the nginx package 
-  shell: hostname
-  # yum: name=nginx state=present
+- name: pull nginx:1.13.7 image
+  shell: |
+    docker pull nginx:1.13.7
   # become: yes
- 
-- name: Create web root directory
-  shell: echo 123
-  # file:
-  #   path: /var/www/html
-  #   state: directory
-  #   mode: 0755
-  #   recurse: yes
  
 - name: Copy custom index.html file 
   copy:
     src: index.html
     dest: /tmp/index.html
     mode: 0644
- 
-- name: Edit Configuration in Nginx 
-  shell : echo 456
-  # replace: 
-  #   path: /etc/nginx/nginx.conf
-  #   regexp: 'root         /usr/share/nginx/html;'
-  #   replace: 'root         /var/www/html/;'
-  #   backup: yes
+
+- name: Run nginx container
+  shell: |
+    docker run -v /tmp:/usr/share/nginx/html -p 80:80 -d nginx:1.13.7
   # become: yes
 
-- name: start the nginx service
-  shell : echo 789
-  # systemd: name=nginx state=started enabled=yes
-  # become: yes
