@@ -1,2 +1,8 @@
-[webservers]
+[webservers-local]
 localhost ansible_connection=local
+
+[webservers-gcp]
+jim-weng1
+
+[webservers:children]
+webservers-gcp

@@ -2,7 +2,7 @@
 - name: pull nginx:1.13.7 image
   shell: |
     docker pull nginx:1.13.7
-  # become: yes
+  become: yes
  
 - name: Copy custom index.html file 
   copy:
@@ -10,8 +10,9 @@
     dest: /tmp/index.html
     mode: 0644
 
+# add mount volume to nginx html
 - name: Run nginx container
   shell: |
     docker run -v /tmp:/usr/share/nginx/html -p 80:80 -d nginx:1.13.7
-  # become: yes
+  become: yes
 
