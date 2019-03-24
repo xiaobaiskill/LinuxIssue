@@ -4,10 +4,10 @@ GitHub：https://github.com/jim0409
 
 # 教育背景
 1. 研究所(2011~2013):國立成功大學統計研究所
-> Institute(2011~2013):Department of Statistics, NCKU)
+> Institute(2011~2013):Department of Statistics, NCKU
 
 2. 大學(2007~2011):國立中正大學數學系
-> College(2007~2011):Department of Mathmatics, CCU)
+> College(2007~2011):Department of Mathmatics, CCU
 
 
 # 工作經歷
@@ -70,7 +70,6 @@ https://github.com/jim0409/PythonLearning-DataStructureLearning/tree/master/Side
 #### Major
 1. Python
 ```
-framework :
 numpy, pandas, tensorflow, django and django-restframework
 ```
 2. Golang
