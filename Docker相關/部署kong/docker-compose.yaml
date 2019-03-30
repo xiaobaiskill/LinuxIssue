@@ -1,0 +1,101 @@
+version: '3.1'
+
+services:
+   kong-db:
+     container_name: kong-db
+     image: postgres:9.6
+     environment:
+       - POSTGRES_DB=kong
+       - POSTGRES_USER=kong
+       - POSTGRES_PASSWORD=kong
+    #volumes:
+    #  - /opt/kong-db/data:/var/lib/postgresql/data
+     healthcheck:
+       test: ["CMD", "pg_isready", "-U", "postgres"]
+       interval: 10s
+       timeout: 5s
+       retries: 5
+     restart: always
+     expose:
+       - 5432
+     ports:
+       - 5432:5432
+
+   # once the docker-compose is up. need to execute it again if the first time migration is failed
+   # then start api-kong again to make sure everything works well.
+   kong-migration:
+     container_name: kong-migrator
+     # image: gcr.io/uat-env-888888/api-kong:0.11.1
+     image: kong:0.11.1
+     depends_on:
+       - kong-db
+     environment:
+       - KONG_DATABASE=postgres
+       - KONG_PG_HOST=kong-db
+       - KONG_PG_DATABASE=kong
+       - KONG_PG_USER=kong
+       - KONG_PG_PASSWORD=kong
+     command: kong migrations up -vv
+
+   api-kong:
+     container_name: api-kong
+    # image: gcr.io/uat-env-888888/api-kong:0.11.1
+     image: kong:0.11.1
+     depends_on:
+       - kong-migration
+       - kong-db
+     environment:
+       - KONG_DATABASE=postgres
+       - KONG_PG_HOST=kong-db
+       - KONG_PG_DATABASE=kong
+       - KONG_PG_USER=kong
+       - KONG_PG_PASSWORD=kong
+       - KONG_PROXY_ACCESS_LOG=/dev/stdout
+       - KONG_ADMIN_ACCESS_LOG=/dev/stdout
+       - KONG_PROXY_ERROR_LOG=/dev/stderr
+       - KONG_ADMIN_ERROR_LOG=/dev/stderr
+     # volumes:
+       # - /opt/api-kong/ssl:/usr/local/kong/syslog
+     expose:
+       - 80
+       - 443
+       - 8001
+       - 8444
+     ports:
+       - 80:80
+       - 443:443
+       - 8001:8001
+       - 8444:8444
+    # healthcheck:
+    #   test: ["CMD-SHELL", "curl -I -s -L http://127.0.0.1 || exit 1"]
+    #   interval: 5s
+    #   retries: 10
+     restart: always
+     ulimits:
+       nproc: 65535
+       nofile:
+         soft: 20000
+         hard: 40000
+    #  logging:
+    #    driver: syslog
+    #    options:
+    #      syslog-address: "tcp://{{ LOGSERVER }}:{{ PORT }}"
+    #      tag: {{ SERVICENAME }}
+   konga:
+     container_name: konga
+     image: pantsel/konga:0.9.0
+     # volumes:
+     #   - /opt/konga/data:/app/kongadata/
+     restart: always
+     expose:
+       - 1337
+     ports:
+       - 1337:1338
+     environment:
+       - NODE_ENV=jimcondition
+       - DB_ADAPTER=postgres
+       - DB_HOST=kong-db
+       - DB_PORT=5432
+       - DB_DATABASE=kong
+       - DB_USER=kong
+       - DB_PASSWORD=kong
