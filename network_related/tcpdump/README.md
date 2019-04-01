@@ -7,7 +7,7 @@ tcpdump -i eth1
 ```
 
 # 監視指定主機的封包
-1. 聽取三有進入或離開sundown的封包: host
+1. 聽取有進入或離開sundown的封包: host
 ```
 tcpdump host sundown
 ```
