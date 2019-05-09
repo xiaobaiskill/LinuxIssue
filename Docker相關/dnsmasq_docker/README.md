@@ -6,4 +6,4 @@ docker-compose up -d
 
 # refer
 https://blog.51cto.com/longlei/2065967
-
+https://www.itgeeker.net/centos6-5-64bit-how-to-install-the-dns-dnsmasq-service-speedup-web-browser/
