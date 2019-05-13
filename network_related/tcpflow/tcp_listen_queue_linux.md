@@ -49,6 +49,20 @@ https://www.percona.com/blog/2011/04/19/mysql-connection-timeouts/
 4. 如果發現一個系統的State經常顯示"times the listen for a socket overflowed"可以嘗試通過增加backlog來緩解該問題
 ```
 
+# Extends for notes
+我們都知道listen參數有個參數backlog，如果服務器不能及時調用accept，把連接從listen queue裡面取走，那麼UNP告訴我們。
+服務器的lisetn queue滿了以後，服務器不會再對建立新連結的SYN包進行SYN+ACK，所以客戶端的connect就會返回ETIMEOUT，但實際上Linux的行為不是這樣的。
+
+起一個server程序在8000 port上lisetn，backlog值是n，不掉用accept;再讓一個client不停的調用connect。
+client端的前n個connect調用立刻就返回成功，這是意料之中的事情。按照UNP的說法，以後在調用connect應該通通超時失敗。
+
+但實際上，在accept queue滿了以後。有的連結是connect timeout，有的是立刻返回成功，有的則是延遲以後返回成功
+```watch "netstat -t -n  | grep 8000 | grep -oP '\w+\s*$'  | sort  | uniq -c"```
+發現，建立的連結數可以無限增加的！在用tcpdump查看，發現當client的第一個SYN發出後，服務器會隨機的選擇是否發送SYN+ACK
+也就是tcp握手的第二步，所以對connect行為的解釋就是，如果這次調用connect的第一個SYN就被SYN+ACK了，那麼connect就會立刻成功;
+如果第一個SYN被忽略，而第二個SYN被Server答覆SYN+ACK了，那麼connect就會延遲但成功;
+如果連續三個SYN都被忽略，connect就會返回connection timeout
+
 # refer
 http://jaseywang.me/2014/07/20/tcp-queue-%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/
 https://www.douban.com/note/178129553/
