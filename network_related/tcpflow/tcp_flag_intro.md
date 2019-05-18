@@ -37,13 +37,14 @@ Datatype consumes 1 sequence number
 ```
 e.g.
 Sender (Established Connection - active close FIN_WAIT_1)
-------------> FIN
+------------> ACK + FIN
                     Receiver (Established Connection - CLOSE WAIT ...passive close)
-ACK + FIN                    <----------------
+ACK                         <----------------
+                    Receiver (Established Connection - LAST_ACK ... then CLOSED)
+ACK + FIN                   <----------------
 Sender (FIN_WAIT_2) TIME_WAIT
 ------------> ACK
-                    Receiver (Established Connection - LAST_ACK ... then CLOSED)
-LAST_ACK                    <----------------
+
 Sender (FIN_WAIT_2) closed after 2msl
 ```
 
