@@ -38,12 +38,13 @@ Datatype consumes 1 sequence number
 e.g.
 Sender (Established Connection - active close FIN_WAIT_1)
 ------------> FIN
-                    Receiver (Established Connection - CLOSE WAIT ...passive close) LAST_ACK
+                    Receiver (Established Connection - CLOSE WAIT ...passive close)
 ACK + FIN                    <----------------
 Sender (FIN_WAIT_2) TIME_WAIT
 ------------> ACK
-                    Receiver (closed)
-Sender (closed)
+                    Receiver (Established Connection - LAST_ACK ... then CLOSED)
+LAST_ACK                    <----------------
+Sender (FIN_WAIT_2) closed after 2msl
 ```
 
 # Reset(RST)：
@@ -82,3 +83,4 @@ https://www.geeksforgeeks.org/computer-network-tcp-flags/
 https://blog.51cto.com/ilexes/154368
 http://www.pcnet.idv.tw/pcnet/network/network_ip_tcp.htm
 https://en.wikipedia.org/wiki/Transmission_Control_Protocol
+https://blog.oldboyedu.com/tcp-wait/
