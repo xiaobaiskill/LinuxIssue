@@ -1,7 +1,13 @@
 version: '3.1'
 
+networks:
+ kong-net:
+  driver: bridge
+
 services:
    kong-db:
+     networks:
+       - kong-net
      container_name: kong-db
      image: postgres:9.6
      environment:
@@ -24,9 +30,12 @@ services:
    # once the docker-compose is up. need to execute it again if the first time migration is failed
    # then start api-kong again to make sure everything works well.
    kong-migration:
+     networks:
+      - kong-net
      container_name: kong-migrator
      # image: gcr.io/uat-env-888888/api-kong:0.11.1
      image: kong:0.11.1
+     restart: on-failure
      depends_on:
        - kong-db
      environment:
@@ -37,8 +46,10 @@ services:
        - KONG_PG_PASSWORD=kong
      command: kong migrations up -vv
 
-   api-kong:
-     container_name: api-kong
+   kong:
+     networks:
+      - kong-net
+     container_name: kong
     # image: gcr.io/uat-env-888888/api-kong:0.11.1
      image: kong:0.11.1
      depends_on:
@@ -82,6 +93,8 @@ services:
     #      syslog-address: "tcp://{{ LOGSERVER }}:{{ PORT }}"
     #      tag: {{ SERVICENAME }}
    konga:
+     networks:
+      - kong-net
      container_name: konga
      image: pantsel/konga:0.9.0
      # volumes:
