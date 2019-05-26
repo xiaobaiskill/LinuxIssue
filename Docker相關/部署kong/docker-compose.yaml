@@ -68,13 +68,13 @@ services:
      # volumes:
        # - /opt/api-kong/ssl:/usr/local/kong/syslog
      expose:
-       - 80
-       - 443
+       - 8000
+       - 8443
        - 8001
        - 8444
      ports:
-       - 80:80
-       - 443:443
+       - 8000:8000
+       - 8443:8443
        - 8001:8001
        - 8444:8444
     # healthcheck:
