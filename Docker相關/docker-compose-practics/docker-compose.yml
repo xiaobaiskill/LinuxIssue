@@ -9,3 +9,10 @@ services:
       - ./html:/usr/share/nginx/html
       # put default.conf in folder conf would moutn into ...
       - ./conf:/etc/nginx/conf.d/
+      # put nginx.conf outside
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      # mount ssl
+      - ./ssl:/etc/nginx/ssl
+      # mount nginx logs
+      - ./log:/var/log/nginx
+      
