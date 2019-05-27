@@ -68,6 +68,14 @@ curl -i localhost:8000/dbpractice/dbpost
 curl -i localhost:8001/api/django-api
 ```
 
+# 使用konga註冊api
+1. 使用docker-compose up -d 等待程式跑完訪問localhost:1337
+2. 使用預設user/password登入:admin/adminadminadmin
+3. 點選connections裡面，連接的星星確認有連線到kong成功的話會在API_GATEWAY跳出一些設定upstream的項目
+4. 點選api，使用預設的web1作為測試。在Upstream URL填入'http://web1'；Uris填入'/'；name可以隨便取一個。之後按SUBMIT CHANGES
+5. 開啟瀏覽器，填入localhost:8000/，會訪問到預設頁面index.html
+
+
 # refer
 1. https://docs.konghq.com/
 2. https://docs.konghq.com/0.14.x/proxy/
