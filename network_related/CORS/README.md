@@ -13,31 +13,31 @@ http://domain-a.com裡面的HTML需要載入一個來自http://domain-b.com/imag
 
 # CORS相關header
 - Access-Control-Allow-Origin
-Indicates whether the response can be shared.
+Indicates whether the response can be shared；表示可以回應的網域
 
 - Access-Control-Allow-Credentials
-Indicates whether the response to the request can be exposed when the credentials flag is true.
+Indicates whether the response to the request can be exposed when the credentials flag is true；當header的值帶true時，表示可以回應一些憑證信任相關的資料
 
 - Access-Control-Allow-Headers
-Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request.
+Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request；用於預檢請求，在實際發出請求前先確認哪些HTTP headers可以被使用
 
 - Access-Control-Allow-Methods
-Specifies the method or methods allowed when accessing the resource in response to a preflight request.
+Specifies the method or methods allowed when accessing the resource in response to a preflight request；指定請求訪問時可以使用的方法
 
 - Access-Control-Expose-Headers
-Indicates which headers can be exposed as part of the response by listing their names.
+Indicates which headers can be exposed as part of the response by listing their names；宣告可以放在回應請求的headers
 
 - Access-Control-Max-Age
-Indicates how long the results of a preflight request can be cached.
+Indicates how long the results of a preflight request can be cached；表示可以緩存預檢請求的時間
 
 - Access-Control-Request-Headers
-Used when issuing a preflight request to let the server know which HTTP headers will be used when the actual request is made.
+Used when issuing a preflight request to let the server know which HTTP headers will be used when the actual request is made；表示哪些headers是可以在預檢請求時使用的
 
 - Access-Control-Request-Method
-Used when issuing a preflight request to let the server know which HTTP method will be used when the actual request is made.
+Used when issuing a preflight request to let the server know which HTTP method will be used when the actual request is made；表示哪些請求方法是可以在預檢請求時使用的
 
 - Origin
-Indicates where a fetch originates from.
+Indicates where a fetch originates from；指示提取源的位置
 
 - Timing-Allow-Origin
 Specifies origins that are allowed to see values of attributes retrieved via features of the Resource Timing API, which would otherwise be reported as zero due to cross-origin restrictions.
