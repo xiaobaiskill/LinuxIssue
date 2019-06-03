@@ -28,6 +28,9 @@ D: DELETE => DELETE
 5. user: -u (夾帶使用者帳號密碼，有時候可以放在querystring上)
 6. cookie: -b
 > 請求夾帶cookie。e.g. curl -b "cookie_name=cookie_value"
+7. -L (Follow redirect): 通常訪問遇到301/302不會繼續接下去，下面的請求。會直接結束，加入`-L`可以在請求導轉後繼續往下請求，直到非3XX請求
+8. -w (write) :配合notes裡面的檔案，可以紀錄該次curl請求的請求時間
+> curl -w "@curl-format.txt" -s "https://example.com"
 
 
 # reference:
@@ -36,3 +39,17 @@ D: DELETE => DELETE
 
 3. https://curl.haxx.se/docs/http-cookies.html
 4. https://stackoverflow.com/questions/15995919/how-to-use-curl-to-send-cookies
+
+
+# notes:
+curl-format.txt
+```
+time_namelookup:  %{time_namelookup}\n
+       time_connect:  %{time_connect}\n
+    time_appconnect:  %{time_appconnect}\n
+   time_pretransfer:  %{time_pretransfer}\n
+      time_redirect:  %{time_redirect}\n
+ time_starttransfer:  %{time_starttransfer}\n
+                    ----------\n
+         time_total:  %{time_total}\n
+```
