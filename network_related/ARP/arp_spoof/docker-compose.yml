@@ -1,0 +1,22 @@
+version: '3'
+services:
+    box1:
+        build:
+            context: .
+            dockerfile: helloworld.dockerfile
+        stdin_open: true
+        tty: true
+    box2:
+        build: 
+            context: .
+            dockerfile: helloworld.dockerfile
+        stdin_open: true
+        tty: true
+    arpspoofer:
+        build:
+            context: .
+            args:
+                - http_proxy=${http_proxy}
+                - https_proxy=${https_proxy}
+        stdin_open: true
+        tty: true
