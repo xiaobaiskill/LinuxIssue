@@ -68,7 +68,7 @@ HSTS preload list是Chrome瀏覽器中的HSTS預載入列表，在該列表中�
 1. max-age至少需要18週，10886400秒
 2. 必須指定includeSubDomains參數
 3. 必須支持preload參數
-所以一個典型滿足HSTS preload list的reponse header為: add_header Strict-Transport-Security: max-age=10886400; includeSubDomains;preload;
+所以一個典型滿足HSTS preload list的reponse header為: add_header Strict-Transport-Security: "max-age=10886400; includeSubDomains; preload";
 
 # refer
 https://zh.wikipedia.org/wiki/HTTP%E4%B8%A5%E6%A0%BC%E4%BC%A0%E8%BE%93%E5%AE%89%E5%85%A8
@@ -78,3 +78,18 @@ https://hstspreload.org/
 
 # 手動清除google chrome的HSTS設定
 https://blog.bennyling.cc/362/clear-google-chrome-hsts-setting/
+
+# extension
+- nginx使用HSTS
+https://www.xolphin.com/support/Nginx/Nginx_-_Configuring_HTTP_Strict_Transport_Security
+
+
+```
+server {
+listen 443 ssl default deferred;
+...
+# config to enable HSTS(HTTP Strict Transport Security)
+add_header Strict-Transport-Security "max-age=63072000; includeSubdomains;";
+...
+}
+```
