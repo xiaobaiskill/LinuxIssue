@@ -10,3 +10,11 @@ Use only docker and docker-compose to create a Redis 5 Replication with master, 
   ```
   docker-compose up -d --build
   ```
+
+# code example
+
+
+
+# refer
+- official doc: https://redis.io/commands/del
+- official doc2: https://www.tutorialspoint.com/redis/
