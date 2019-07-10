@@ -1,0 +1,30 @@
+version: "3"
+
+networks:
+  proxy-net:
+    driver: bridge
+
+services:
+  web:
+    networks:
+      - proxy-net
+    image:  nginx:1.13.7
+    ports:
+      - "80:80"
+    volumes:
+      # put index.html in folder html would mount into conatiner
+      - ./index.html:/usr/share/nginx/html/index.html
+      # put default.conf in folder conf would moutn into ...
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+      # put nginx.conf outside
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      # mount ssl
+      # - ./ssl:/etc/nginx/ssl
+      # mount nginx logs
+      - ./log:/var/log/nginx
+#  ws:
+#    networks:
+#      - proxy-net
+#    build: .
+#    ports:
+#      - 8010:8010
