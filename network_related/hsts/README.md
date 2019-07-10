@@ -71,10 +71,10 @@ HSTS preload list是Chrome瀏覽器中的HSTS預載入列表，在該列表中�
 所以一個典型滿足HSTS preload list的reponse header為: add_header Strict-Transport-Security: "max-age=10886400; includeSubDomains; preload";
 
 # refer
-https://zh.wikipedia.org/wiki/HTTP%E4%B8%A5%E6%A0%BC%E4%BC%A0%E8%BE%93%E5%AE%89%E5%85%A8
-https://blog.wilddog.com/?page_id=1493
-https://free.com.tw/hsts-preload-list/
-https://hstspreload.org/
+- https://zh.wikipedia.org/wiki/HTTP%E4%B8%A5%E6%A0%BC%E4%BC%A0%E8%BE%93%E5%AE%89%E5%85%A8
+- https://blog.wilddog.com/?page_id=1493
+- https://free.com.tw/hsts-preload-list/
+- https://hstspreload.org/
 
 # 手動清除google chrome的HSTS設定
 https://blog.bennyling.cc/362/clear-google-chrome-hsts-setting/

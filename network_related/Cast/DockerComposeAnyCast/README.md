@@ -5,4 +5,4 @@
 ubuntu:16.04
 
 # refer
-https://github.com/kd7lxl/docker-anycast-service-discovery
+- https://github.com/kd7lxl/docker-anycast-service-discovery

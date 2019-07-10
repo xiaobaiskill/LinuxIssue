@@ -60,7 +60,7 @@ TEST.COM  192.168.0.3
 > 增加header 'Access-Control-Allow-Origin' '*'
 
 # refer
-https://developer.mozilla.org/zh-TW/docs/Web/HTTP/CORS
-https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
-https://blog.csdn.net/l1028386804/article/details/79488328
-https://www.cnblogs.com/morethink/p/6628757.html
+- https://developer.mozilla.org/zh-TW/docs/Web/HTTP/CORS
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
+- https://blog.csdn.net/l1028386804/article/details/79488328
+- https://www.cnblogs.com/morethink/p/6628757.html

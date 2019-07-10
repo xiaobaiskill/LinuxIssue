@@ -41,10 +41,10 @@ note:
 ```
 
 # refer
-https://imququ.com/post/referrer-policy.html
-https://zhidao.baidu.com/question/204495077642103125.html
-https://yutuo.net/archives/f1b375231265f7fd.html
-https://www.chedong.com/blog/archives/001501.html
+- https://imququ.com/post/referrer-policy.html
+- https://zhidao.baidu.com/question/204495077642103125.html
+- https://yutuo.net/archives/f1b375231265f7fd.html
+- https://www.chedong.com/blog/archives/001501.html
 
 # extension
 - Content-Security-Policy

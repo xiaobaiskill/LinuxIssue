@@ -97,7 +97,7 @@ evtSource.close();
 
 
 # refer
-https://developer.mozilla.org/zh-TW/docs/Web/API/Server-sent_events/Using_server-sent_events
-https://www.w3schools.com/html/html5_serversentevents.asp
-https://www.ruanyifeng.com/blog/2017/05/server-sent_events.html
-https://serverfault.com/questions/801628/for-server-sent-events-sse-what-nginx-proxy-configuration-is-appropriate
+- https://developer.mozilla.org/zh-TW/docs/Web/API/Server-sent_events/Using_server-sent_events
+- https://www.w3schools.com/html/html5_serversentevents.asp
+- https://www.ruanyifeng.com/blog/2017/05/server-sent_events.html
+- https://serverfault.com/questions/801628/for-server-sent-events-sse-what-nginx-proxy-configuration-is-appropriate

@@ -69,6 +69,6 @@ authoritative DNS根據用戶所在區域和集群容量信息返回集群的VIP
 
 
 # refer
-https://www.digitimes.com.tw/tw/dt/n/shwnws.asp?cnlid=&id=0000123944_1ju8xdyl51almb3nbf11j
-https://kknews.cc/zh-tw/tech/g24rjz9.html
-https://wellmars.wordpress.com/2012/02/15/%E6%B7%BA%E8%AB%87-gslb-global-server-load-balance%E5%BB%A3%E5%9F%9F%E5%BC%8F%E8%B2%A0%E8%BC%89%E5%B9%B3%E8%A1%A1/
+- https://www.digitimes.com.tw/tw/dt/n/shwnws.asp?cnlid=&id=0000123944_1ju8xdyl51almb3nbf11j
+- https://kknews.cc/zh-tw/tech/g24rjz9.html
+- https://wellmars.wordpress.com/2012/02/15/%E6%B7%BA%E8%AB%87-gslb-global-server-load-balance%E5%BB%A3%E5%9F%9F%E5%BC%8F%E8%B2%A0%E8%BC%89%E5%B9%B3%E8%A1%A1/

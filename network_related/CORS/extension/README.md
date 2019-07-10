@@ -15,5 +15,5 @@ CSS 樣式表（讓 CSSOM 存取）。
 
 
 # refer
-https://developer.mozilla.org/zh-TW/docs/Web/HTTP/CORS
-https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Server-Side_Access_Control
+- https://developer.mozilla.org/zh-TW/docs/Web/HTTP/CORS
+- https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Server-Side_Access_Control

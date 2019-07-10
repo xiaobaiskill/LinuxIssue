@@ -18,6 +18,6 @@ SOA通常包括，軟體元件、服務及流程三個部分，SOA具有下列�
 為了釐清企業內部所有的商業服務，確實呈現相關的流程及核心價值，以定義其中所包含的元件，因此需要SOA治理(SOA Governance)的功能，而所有和SOA治理相關的資訊，則存在SOA資產庫(SOA Repository)中，強調的是商業行為管理的概念
 
 # refer:
-http://www.cc.ntu.edu.tw/chinese/epaper/20070620_1008.htm
-https://www.digitimes.com.tw/tw/dt/n/shwnws.asp?cnlid=&id=0000123327_9xh202g93w4ldb6tsy8dg
-https://zh.wikipedia.org/wiki/%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84
+- http://www.cc.ntu.edu.tw/chinese/epaper/20070620_1008.htm
+- https://www.digitimes.com.tw/tw/dt/n/shwnws.asp?cnlid=&id=0000123327_9xh202g93w4ldb6tsy8dg
+- https://zh.wikipedia.org/wiki/%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84

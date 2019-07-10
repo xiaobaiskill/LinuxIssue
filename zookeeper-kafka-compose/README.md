@@ -9,5 +9,5 @@
 - 使用`sh kafka_consumer.sh`執行kafka container裡面的kafka來對topic:`test`收取一些log
 
 # This repo is refer from 
-> https://github.com/wurstmeister/kafka-docker
-> https://kafka.apache.org/documentation/
+- https://github.com/wurstmeister/kafka-docker
+- https://kafka.apache.org/documentation/

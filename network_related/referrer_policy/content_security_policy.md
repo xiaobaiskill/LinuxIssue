@@ -57,7 +57,7 @@ CSP協議可以控制的內容非常多，而且如果不特別指定`'unsafe-in
 
 
 # refer
-https://imququ.com/post/content-security-policy-reference.html
-https://www.w3.org/TR/CSP/
-https://stackoverflow.com/questions/43249998/chrome-err-blocked-by-xss-auditor-details
-https://coreruleset.org/20181212/core-rule-set-docker-image/
+- https://imququ.com/post/content-security-policy-reference.html
+- https://www.w3.org/TR/CSP/
+- https://stackoverflow.com/questions/43249998/chrome-err-blocked-by-xss-auditor-details
+- https://coreruleset.org/20181212/core-rule-set-docker-image/

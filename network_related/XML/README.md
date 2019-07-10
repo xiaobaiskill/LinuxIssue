@@ -52,8 +52,8 @@ e.g.
 5. XML的結構有一個缺陷，寄售不支援分影格(framing)。當多條XML訊息在TCP上傳書的時候，無法基於XML協定來確定一條XML訊息是否已經結束
 
 # refer
-https://zh.wikipedia.org/wiki/XML
-https://sls.weco.net/node/10554
-https://dotblogs.com.tw/johnny/archive/2010/01/25/13303.aspx
-https://stackoverflow.com/questions/4920877/xml-how-to-create-run-xml-file
-https://javatoybox.blogspot.com/2018/06/xml-1.html
+- https://zh.wikipedia.org/wiki/XML
+- https://sls.weco.net/node/10554
+- https://dotblogs.com.tw/johnny/archive/2010/01/25/13303.aspx
+- https://stackoverflow.com/questions/4920877/xml-how-to-create-run-xml-file
+- https://javatoybox.blogspot.com/2018/06/xml-1.html

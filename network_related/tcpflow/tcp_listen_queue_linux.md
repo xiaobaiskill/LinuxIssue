@@ -64,11 +64,11 @@ client端的前n個connect調用立刻就返回成功，這是意料之中的事
 如果連續三個SYN都被忽略，connect就會返回connection timeout
 
 # refer
-http://jaseywang.me/2014/07/20/tcp-queue-%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/
-https://www.douban.com/note/178129553/
-https://madalanarayana.wordpress.com/2014/04/13/learnings-on-tcp-syn/
+- http://jaseywang.me/2014/07/20/tcp-queue-%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/
+- https://www.douban.com/note/178129553/
+- https://madalanarayana.wordpress.com/2014/04/13/learnings-on-tcp-syn/
 
 
 # extend-refer
-http://engineering.chartbeat.com/2014/01/02/part-1-lessons-learned-tuning-tcp-and-nginx-in-ec2/
-http://engineering.chartbeat.com/2014/02/12/part-2-lessons-learned-tuning-tcp-and-nginx-in-ec2/
+- http://engineering.chartbeat.com/2014/01/02/part-1-lessons-learned-tuning-tcp-and-nginx-in-ec2/
+- http://engineering.chartbeat.com/2014/02/12/part-2-lessons-learned-tuning-tcp-and-nginx-in-ec2/

@@ -128,5 +128,5 @@ AnyCast在大型企業中也常用於CDN部署，採用AnyCast技術為用戶提
 
 
 # refer:
-https://www.cnblogs.com/itzgr/p/10192799.html
-https://github.com/kd7lxl/docker-anycast-service-discovery.git
+- https://www.cnblogs.com/itzgr/p/10192799.html
+- https://github.com/kd7lxl/docker-anycast-service-discovery.git

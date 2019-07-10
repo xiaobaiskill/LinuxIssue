@@ -115,8 +115,8 @@ XML規範中，內定字集是Unicode並要求所有XML的應用軟件都支持U
 那麼整份文件也可以使用中文了(包括標記及內容)
 
 # refer
-https://sls.weco.net/node/10554
-https://dotblogs.com.tw/johnny/archive/2010/01/25/13303.aspx
-https://javatoybox.blogspot.com/2018/06/xml-1.html
-https://www.w3schools.com/xml/schema_intro.asp
-https://www.w3schools.com/xml/xml_validator.asp
+- https://sls.weco.net/node/10554
+- https://dotblogs.com.tw/johnny/archive/2010/01/25/13303.aspx
+- https://javatoybox.blogspot.com/2018/06/xml-1.html
+- https://www.w3schools.com/xml/schema_intro.asp
+- https://www.w3schools.com/xml/xml_validator.asp

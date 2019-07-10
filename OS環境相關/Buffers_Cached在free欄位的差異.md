@@ -18,6 +18,6 @@ Long answer: Cached is the size of the Linux page cache, minus the memory in the
 
 
 # refer
-https://shuheikagawa.com/blog/2017/05/27/memory-usage/
-https://fabiokung.com/2014/03/13/memory-inside-linux-containers/
-https://docs.docker.com/config/containers/runmetrics/
+- https://shuheikagawa.com/blog/2017/05/27/memory-usage/
+- https://fabiokung.com/2014/03/13/memory-inside-linux-containers/
+- https://docs.docker.com/config/containers/runmetrics/

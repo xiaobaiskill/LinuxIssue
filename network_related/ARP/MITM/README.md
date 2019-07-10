@@ -4,7 +4,7 @@ MITM，中間人攻擊。在密碼學和電腦安全領域中，是指攻擊者�
 > 例如，在一個未加密的Wi-Fi無線存取點的接受範圍內的中間人攻擊者，可以將自己作為一個中間人插入這個網路
 
 # refer
-https://pdfs.semanticscholar.org/153a/9a9b77afaeb573e9c2a73bf00d63b8c878ee.pdf
-https://zh.wikipedia.org/wiki/%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB
-https://mitmproxy.org/
-https://blog.trendmicro.com.tw/?p=52362
+- https://pdfs.semanticscholar.org/153a/9a9b77afaeb573e9c2a73bf00d63b8c878ee.pdf
+- https://zh.wikipedia.org/wiki/%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB
+- https://mitmproxy.org/
+- https://blog.trendmicro.com.tw/?p=52362

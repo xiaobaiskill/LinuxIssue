@@ -93,5 +93,5 @@ Authoritative answers can be found from:
 
 
 # refer
-https://umbrella.cisco.com/blog/2014/07/16/difference-authoritative-recursive-dns-nameservers/
-https://www.dnsknowledge.com/whatis/authoritative-name-server/
+- https://umbrella.cisco.com/blog/2014/07/16/difference-authoritative-recursive-dns-nameservers/
+- https://www.dnsknowledge.com/whatis/authoritative-name-server/

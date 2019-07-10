@@ -123,7 +123,7 @@ VM1762:14 jim
 ```
 
 # refer
-https://ithelp.ithome.com.tw/articles/10200409
-http://www.runoob.com/ajax/ajax-tutorial.html
-http://huli.logdown.com/posts/2223581-ajax-and-cors
-http://www.w3school.com.cn/jquery/ajax_ajax.asp
+- https://ithelp.ithome.com.tw/articles/10200409
+- http://www.runoob.com/ajax/ajax-tutorial.html
+- http://huli.logdown.com/posts/2223581-ajax-and-cors
+- http://www.w3school.com.cn/jquery/ajax_ajax.asp

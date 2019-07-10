@@ -85,7 +85,7 @@ server {
 
 
 # refer
-https://kknews.cc/zh-tw/other/6nqz2p.html
-https://docs.nginx.com/nginx/admin-guide/content-cache/content-caching/
-https://zh.wikipedia.org/wiki/Web%E7%BC%93%E5%AD%98
-https://docs.nginx.com/nginx/admin-guide/content-cache/content-caching/
+- https://kknews.cc/zh-tw/other/6nqz2p.html
+- https://docs.nginx.com/nginx/admin-guide/content-cache/content-caching/
+- https://zh.wikipedia.org/wiki/Web%E7%BC%93%E5%AD%98
+- https://docs.nginx.com/nginx/admin-guide/content-cache/content-caching/

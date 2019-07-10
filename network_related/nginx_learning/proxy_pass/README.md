@@ -13,8 +13,8 @@ or
 分別針對port 8010 <-websocket origin port>以及 port 80做websocket連線，確認兩個封包傳送的情境
 
 # refer
-https://www.nginx.com/blog/websocket-nginx/
-http://fu7771.blogspot.com/2017/09/nginx-websocket.html
+- https://www.nginx.com/blog/websocket-nginx/
+- http://fu7771.blogspot.com/2017/09/nginx-websocket.html
 
 - nginx遇到499錯誤
 https://www.jianshu.com/p/aa5a06fef39c

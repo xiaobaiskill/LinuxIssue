@@ -62,5 +62,5 @@ Some other methods:
 
 
 # refer
-https://www.w3schools.com/js/js_window.asp
-https://en.wikipedia.org/wiki/Browser_Object_Model
+- https://www.w3schools.com/js/js_window.asp
+- https://en.wikipedia.org/wiki/Browser_Object_Model

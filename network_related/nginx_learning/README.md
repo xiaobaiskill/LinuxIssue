@@ -309,10 +309,10 @@ location / {
 
 # refer
 - nginx代理設定
-https://blog.hellojcc.tw/2015/12/07/nginx-beginner-tutorial/
-https://blog.hellojcc.tw/2018/05/02/setup-https-with-letsencrypt-on-nginx/
-https://sharefunyeh.gitbooks.io/webdev/content/articles/understand-nginx-proxy-load-balancing-buffer-and-cache.html
-http://single9.net/2018/03/nginx-reverse-proxy-server-and-socket-io/
+    - https://blog.hellojcc.tw/2015/12/07/nginx-beginner-tutorial/
+    - https://blog.hellojcc.tw/2018/05/02/setup-https-with-letsencrypt-on-nginx/
+    - https://sharefunyeh.gitbooks.io/webdev/content/articles/understand-nginx-proxy-load-balancing-buffer-and-cache.html
+    - http://single9.net/2018/03/nginx-reverse-proxy-server-and-socket-io/
 
 
 - nginx access log設定

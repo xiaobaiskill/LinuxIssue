@@ -150,8 +150,8 @@ e.g.
 DOM是一種觀念，為了不讓網頁再渲染的過程中過度的`重畫頁面(Repaint)`甚至是`重構頁面(Reflow)`而產生
 
 # refer
-https://zh.wikipedia.org/wiki/%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B
-https://openhome.cc/Gossip/JavaScript/W3CDOM.html
-https://ithelp.ithome.com.tw/articles/10202689
-https://developer.mozilla.org/zh-TW/docs/Glossary/DOM
-https://developer.mozilla.org/zh-TW/docs/Web/API/Document_Object_Model
+- https://zh.wikipedia.org/wiki/%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B
+- https://openhome.cc/Gossip/JavaScript/W3CDOM.html
+- https://ithelp.ithome.com.tw/articles/10202689
+- https://developer.mozilla.org/zh-TW/docs/Glossary/DOM
+- https://developer.mozilla.org/zh-TW/docs/Web/API/Document_Object_Model

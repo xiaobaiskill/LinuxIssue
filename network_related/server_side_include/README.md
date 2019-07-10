@@ -18,9 +18,9 @@ nginx自帶SSI，不用額外再加裝套件，支援三個配置屬性：
 
 
 # refer
-https://codertw.com/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/46086/
-https://www.itread01.com/article/1428022145.html
-https://www.itread01.com/p/209116.html
-https://www.csie.ntu.edu.tw/~b91053/web/exp5/%A4%B0%BB%F2%ACOSSI.htm
-http://www.freewebmasterhelp.com/tutorials/ssi
-https://www.cnblogs.com/iforever/p/4417428.html
+- https://codertw.com/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/46086/
+- https://www.itread01.com/article/1428022145.html
+- https://www.itread01.com/p/209116.html
+- https://www.csie.ntu.edu.tw/~b91053/web/exp5/%A4%B0%BB%F2%ACOSSI.htm
+- http://www.freewebmasterhelp.com/tutorials/ssi
+- https://www.cnblogs.com/iforever/p/4417428.html

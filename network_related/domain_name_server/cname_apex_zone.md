@@ -113,5 +113,5 @@ This is most likely to fail and will result in mail delivery and other intermitt
 
 
 # refer
-https://www.isc.org/blogs/cname-at-the-apex-of-a-zone/
-https://aws.amazon.com/tw/route53/faqs/
+- https://www.isc.org/blogs/cname-at-the-apex-of-a-zone/
+- https://aws.amazon.com/tw/route53/faqs/

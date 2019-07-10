@@ -195,7 +195,7 @@
 - RFCs : Request for Comments
 
 # refer
-https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
-https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/204
-https://www.puritys.me/docs-blog/article-45-Http-status-%E7%8B%80%E6%85%8B-404-304.html
-https://en.wikipedia.org/wiki/WebDAV
+- https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+- https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/204
+- https://www.puritys.me/docs-blog/article-45-Http-status-%E7%8B%80%E6%85%8B-404-304.html
+- https://en.wikipedia.org/wiki/WebDAV

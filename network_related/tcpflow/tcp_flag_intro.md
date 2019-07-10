@@ -80,8 +80,8 @@ PSH: 資料仍舊會依序列送出 <-> URG: 資料不會進入序列，會直�
 
 
 # refer
-https://www.geeksforgeeks.org/computer-network-tcp-flags/
-https://blog.51cto.com/ilexes/154368
-http://www.pcnet.idv.tw/pcnet/network/network_ip_tcp.htm
-https://en.wikipedia.org/wiki/Transmission_Control_Protocol
-https://blog.oldboyedu.com/tcp-wait/
+- https://www.geeksforgeeks.org/computer-network-tcp-flags/
+- https://blog.51cto.com/ilexes/154368
+- http://www.pcnet.idv.tw/pcnet/network/network_ip_tcp.htm
+- https://en.wikipedia.org/wiki/Transmission_Control_Protocol
+- https://blog.oldboyedu.com/tcp-wait/
