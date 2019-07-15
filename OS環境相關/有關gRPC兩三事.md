@@ -149,3 +149,15 @@ message Result {
 5. 定義好server/main.go，執行可以帶起一個server。(保持running)
 6. 定義好client/main.go，執行可以得之前定義好的method所對應的response
 > gRPC提供的範例：https://github.com/grpc/grpc-go/tree/master/examples
+
+### extend
+fix protoc bug
+1. install protoc again with cli : `sh install_protoc_on_ubuntu_sh`
+2. update prot0 & protoc-gen-go ith cli : `go get -u github.com/golang/protobuf/{proto,protoc-gen-go}` 
+
+# refer
+1. golang return error with ` undefined: proto.InternalMessageInfo`
+- https://blog.csdn.net/busai2/article/details/82805788
+
+2. 高版本protoc搭配低版本protobuf
+- https://www.cnblogs.com/mind-water/articles/10399995.html
