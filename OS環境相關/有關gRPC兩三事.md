@@ -161,3 +161,16 @@ fix protoc bug
 
 2. 高版本protoc搭配低版本protobuf
 - https://www.cnblogs.com/mind-water/articles/10399995.html
+
+
+### About protoc generates *.pb.go without methods included in files
+1. execute cli
+> protoc --go_out=plugins=grpc: .
+
+2. checkfile ... only includes `struct` and no methods included ...
+refer:
+- https://askubuntu.com/questions/1072683/how-can-i-install-protoc-on-ubuntu-16-04
+
+3. finall success with cli:
+> sudo apt install protobuf-compiler
+
