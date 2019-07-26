@@ -1,0 +1,254 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "alt+s",
+        "command": "workbench.action.files.save"
+    },
+    {
+        "key": "ctrl+s",
+        "command": "-workbench.action.files.save"
+    },
+    {
+        "key": "alt+c",
+        "command": "editor.action.clipboardCopyAction",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "-editor.action.clipboardCopyAction",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "alt+c",
+        "command": "-workbench.action.terminal.toggleFindCaseSensitiveTerminalFocus",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+c",
+        "command": "-workbench.action.terminal.toggleFindCaseSensitive",
+        "when": "terminalFindWidgetFocused"
+    },
+    {
+        "key": "alt+c",
+        "command": "-toggleFindCaseSensitive",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+c",
+        "command": "-toggleSearchCaseSensitive",
+        "when": "searchViewletFocus && searchViewletVisible && !fileMatchOrFolderMatchFocus"
+    },
+    {
+        "key": "alt+c",
+        "command": "-markdown.extension.checkTaskList",
+        "when": "editorTextFocus && editorLangId == 'markdown'"
+    },
+    {
+        "key": "alt+v",
+        "command": "editor.action.clipboardPasteAction",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+v",
+        "command": "-editor.action.clipboardPasteAction",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+z",
+        "command": "undo",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+z",
+        "command": "-undo",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+x",
+        "command": "editor.action.clipboardCutAction",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+x",
+        "command": "-editor.action.clipboardCutAction",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+alt+]",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+pagedown",
+        "command": "-workbench.action.nextEditor"
+    },
+    {
+        "key": "shift+alt+[",
+        "command": "workbench.action.previousEditor"
+    },
+    {
+        "key": "ctrl+pageup",
+        "command": "-workbench.action.previousEditor"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.openRecent"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.reloadWindow",
+        "when": "isDevelopment"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.quickOpenNavigateNextInRecentFilesPicker",
+        "when": "inQuickOpen && inRecentFilesPicker"
+    },
+    {
+        "key": "alt+w",
+        "command": "workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "shift+alt+e",
+        "command": "workbench.view.explorer"
+    },
+    {
+        "key": "ctrl+shift+e",
+        "command": "-workbench.view.explorer"
+    },
+    {
+        "key": "shift+alt+e",
+        "command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+shift+e",
+        "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "workbench.view.search",
+        "when": "!searchViewletVisible"
+    },
+    {
+        "key": "ctrl+shift+f",
+        "command": "-workbench.view.search",
+        "when": "!searchViewletVisible"
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "workbench.action.findInFiles"
+    },
+    {
+        "key": "ctrl+shift+f",
+        "command": "-workbench.action.findInFiles"
+    },
+    {
+        "key": "alt+f",
+        "command": "actions.find"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-actions.find"
+    },
+    {
+        "key": "alt+a",
+        "command": "editor.action.selectAll",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+a",
+        "command": "-editor.action.selectAll",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "alt+a",
+        "command": "editor.action.webvieweditor.selectAll",
+        "when": "!editorFocus && !inputFocus && activeEditor == 'WebviewEditor'"
+    },
+    {
+        "key": "ctrl+a",
+        "command": "-editor.action.webvieweditor.selectAll",
+        "when": "!editorFocus && !inputFocus && activeEditor == 'WebviewEditor'"
+    },
+    {
+        "key": "alt+a",
+        "command": "list.selectAll",
+        "when": "listFocus && listSupportsMultiselect && !inputFocus"
+    },
+    {
+        "key": "ctrl+a",
+        "command": "-list.selectAll",
+        "when": "listFocus && listSupportsMultiselect && !inputFocus"
+    },
+    {
+        "key": "alt+/",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+/",
+        "command": "-editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+alt+f",
+        "command": "workbench.action.toggleFullScreen"
+    },
+    {
+        "key": "f11",
+        "command": "-workbench.action.toggleFullScreen"
+    },
+    {
+        "key": "alt+v",
+        "command": "workbench.action.terminal.paste",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+v",
+        "command": "-workbench.action.terminal.paste",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+c",
+        "command": "workbench.action.terminal.copySelection",
+        "when": "terminalFocus && terminalTextSelected"
+    },
+    {
+        "key": "ctrl+shift+c",
+        "command": "-workbench.action.terminal.copySelection",
+        "when": "terminalFocus && terminalTextSelected"
+    },
+    {
+        "key": "alt+b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "alt+b",
+        "command": "extension.vim_ctrl+b",
+        "when": "editorTextFocus && vim.active && vim.use<C-b> && !inDebugRepl && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-extension.vim_ctrl+b",
+        "when": "editorTextFocus && vim.active && vim.use<C-b> && !inDebugRepl && vim.mode != 'Insert'"
+    },
+    {
+        "key": "alt+b",
+        "command": "markdown.extension.editing.toggleBold",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-markdown.extension.editing.toggleBold",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+    }
+] 
