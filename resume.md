@@ -1,5 +1,5 @@
-信箱：berserker.01.tw@hotmail.com
-GitHub：https://github.com/jim0409
+# 聯絡方式
+- 信箱：berserker.01.tw@hotmail.com
 
 
 # 教育背景
@@ -11,23 +11,32 @@ GitHub：https://github.com/jim0409
 
 
 # 工作經歷
+- (2019~Now):雲中雲科技有限公司-golang工程師
+1. Ability to maintain and develop golang projects
+2. Ability to leverage services with `NSQ` and `Redis`
+3. Ability to monitor service with `Grafana` and `Prometheus`
+4. Ability to design scaleable architecture with `test-driven development`
+5. Familiar with common tools, `Slack`, `Jira`, `ELK(elasticsearch logstsh kibana)`
+6. Familiar with `KONG`(a nginx based gateway service)
+
+
 - (2018~2019):摩速科技有限公司-測試工程師/網站可靠度工程師
-1. Ability to write test plan for on going product
-2. Ability to write Dockerfile and docker-compose.yml
-3. Ability to write Seleinum with python
-4. Ability to use tcpdump and wireshark
-5. Ability to use apache benchmark and MZ
-6. Deploy Jenkins and Bugzilla systems
-7. Deploy test environments with nginx
+1. Ability to `write test plan` for on going product
+2. Ability to write `Dockerfile` and `docker-compose.yml`
+3. Ability to write `Seleinum` with `python`
+4. Ability to use `tcpdump` and `wireshark` to analysis packets
+5. Ability to use `apache benchmak` and `mz(mausezahn)`
+6. Deploy and maintain `Jenkins(Jenkinsfile)` and `Bugzilla(define the life of a bug)` systems
+7. Deploy test environments with `nginx` also master in `virtual host`, `proxy pass`, `set header` with `cache behavior` against browser
 
 
 - (2017~2018):先智雲端數據股份有限公司-資料科學家/軟體工程師
-1. Deploy VM on EC2
-2. Deploy server like Ubuntu, Centos, Nutanix, ESXI and vCenter
-3. Write telegraf plugin with golang package `govmomi`
-4. Write python3 with `tensorflow` and related package like numpy, pandas and matplotlib etc ...
+1. Deploy VM on `EC2`
+2. Deploy server like `Ubuntu`, `Centos`, `Nutanix`, `ESXI` and `vCenter`
+3. Write `telegraf` plugin with golang package `govmomi`
+4. Write python3 with `tensorflow` and related package like `numpy`, `pandas` and `matplotlib` etc ...
 5. Write shell-script for POC deploying
-6. Write ansible-playbook script for POC deploying
+6. Write `ansible-playbook(import role and customized cfg)` script for POC deploying
 
 
 - (2017~2017):長青資訊有限公司-數值工程師
@@ -50,6 +59,7 @@ GitHub：https://github.com/jim0409
 
 
 # 經歷
+- 雲中雲科技有限公司-golang工程師(2019~)
 - 摩速科技有限公司-測試工程師/網站可靠度工程師(2018~2019)
 - 先智雲端數據股份有限公司-資料科學家/軟體工程師(2017~2018)
 - 長青資訊有限公司-數值工程師(2017~2017)
@@ -74,7 +84,7 @@ numpy, pandas, tensorflow, django and django-restframework
 ```
 2. Golang
 ```
-telegraf, govmomi, gRPC
+telegraf, govmomi, gRPC(&mock), gin(&mock), gorm(&mock), goquery, go-redis, redigo, go-nsq, prometheus, gorilla/websocket
 ```
 
 #### Minor
