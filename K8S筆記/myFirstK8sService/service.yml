@@ -1,12 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: front-end-service
+  name: nginx-test-service
 spec:
-  externalTrafficPolicy: Cluster
-  type: LoadBalancer
+  # externalTrafficPolicy: Cluster # comment out this to use ingress instead of service
+  # type: LoadBalancer # use extenal IP
+  type: NodePort # use NAT inside k8s
   selector:
     app: nginx
+    # name: nginx
+    # env: dev
+    # color: green
   ports:
     - protocol: TCP
       port: 80

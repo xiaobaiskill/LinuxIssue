@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1 # 官網寫使用: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+spec:
+  backend:
+    serviceName: nginx
+    servicePort: 80
+
+
+# refer notes:
+# https://github.com/kubernetes/website/issues/14322
+# ingress在networking.k8s.io有bug，無法正常運作
