@@ -2,16 +2,17 @@ apiVersion: extensions/v1beta1 # 官網寫使用: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: nginx-ingress
+
 spec:
   rules:
   - http:
       paths:
       - path: /*
-        backend:  
+        backend:
           serviceName: nginx
           servicePort: 80
       - path: /health
-        backend:  
+        backend:
           serviceName: nginx
           servicePort: 80
 

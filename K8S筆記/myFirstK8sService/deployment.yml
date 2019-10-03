@@ -24,9 +24,11 @@ spec:
         # env: dev # 舊版使用
         # color: green # 舊版使用
     spec:
+      hostNetwork: false # 
       containers:
       - name: nginx
         image: nginx:1.7.9
+        imagePullPolicy: Always # 當有新的映像檔更新時會自動去拉映像檔的功能
         ports:
         - containerPort: 80
         env:

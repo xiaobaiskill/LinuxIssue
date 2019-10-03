@@ -2,6 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nginx-test-service
+  labels:
+    app: nginx
 spec:
   # externalTrafficPolicy: Cluster # comment out this to use ingress instead of service
   # type: LoadBalancer # use extenal IP
