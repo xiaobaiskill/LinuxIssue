@@ -26,3 +26,4 @@ Warning  Failed          13s (x7 over 52s)  kubelet, gke-lottery-platform-cin-de
 
 ### 關於版本問題
 - https://segmentfault.com/a/1190000017134399
+- https://cloud.google.com/kubernetes-engine/docs/concepts/ingress

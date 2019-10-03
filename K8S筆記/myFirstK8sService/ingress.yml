@@ -3,9 +3,17 @@ kind: Ingress
 metadata:
   name: nginx-ingress
 spec:
-  backend:
-    serviceName: nginx
-    servicePort: 80
+  rules:
+  - http:
+      paths:
+      - path: /*
+        backend:  
+          serviceName: nginx
+          servicePort: 80
+      - path: /health
+        backend:  
+          serviceName: nginx
+          servicePort: 80
 
 
 # refer notes:
