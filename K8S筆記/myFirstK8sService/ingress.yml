@@ -9,11 +9,11 @@ spec:
       paths:
       - path: /*
         backend:
-          serviceName: nginx
+          serviceName: nginx-test-service
           servicePort: 80
       - path: /health
         backend:
-          serviceName: nginx
+          serviceName: nginx-test-service
           servicePort: 80
 
 
