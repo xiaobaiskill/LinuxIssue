@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-deployment
+  labels:
+    app: redis
+spec:
+  selector:
+    matchLabels:
+      app: redis
+  template:
+    metadata:
+      labels:
+        app: redis
+    spec:
+      hostNetwork: false # 
+      containers:
+      - name: redis
+        image: redis:latest
+        imagePullPolicy: Always # 當有新的映像檔更新時會自動去拉映像檔的功能
+        args: ["--requirepass", "yourpassword"]
+        ports:
+        - containerPort: 6379
