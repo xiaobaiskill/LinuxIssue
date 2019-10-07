@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: adminer-service
+  labels:
+    app: adminer
+spec:
+  # externalTrafficPolicy: Cluster # comment out this to use ingress instead of service
+  # type: LoadBalancer # use extenal IP
+  type: NodePort # use NAT inside k8s
+  selector:
+    app: adminer
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080 # front-end: Note: A Service can map any incoming port to a targetPort. By default and for convenience, the targetPort is set to the same value as the port field

@@ -43,7 +43,7 @@
       1. paths:
          1. path: 指定該路由下導引到哪個位置，例如`path: /*`
          2. backend: 對於指定path下要導引到哪個backend的說明，例如
-            1. `serviceName: nginx`: 要導引的後端服務名稱
+            1. `serviceName: nginx`: 要導引的service.yml的`metadata: name`名稱
             2. `servicePort: 80`: 對應服務的port號
 
 
@@ -79,7 +79,7 @@ Warning  Failed          13s (x7 over 52s)  kubelet, gke-lottery-platform-cin-de
 
 ### ingress controllers
 - https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/
-
+- https://medium.com/ibm-garage/how-to-direct-different-urls-to-different-services-in-kubernetes-646438ece73a
 
 ### 關於版本問題:
 - https://segmentfault.com/a/1190000017134399
