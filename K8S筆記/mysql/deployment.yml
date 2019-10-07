@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-deployment
+  labels:
+    app: mysql
+spec:
+  # replicas: 3 # number of pods need to create
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      hostNetwork: false 
+      containers:
+      - name: mysql
+        image: mysql
+        imagePullPolicy: Always # 當有新的映像檔更新時會自動去拉映像檔的功能
+        # mysql因為8.0+以後加密的方式有改變，所以需要改善default-authentication-plugin為mysql_native_password
+        args: ["--default-authentication-plugin=mysql_native_password"]
+        ports:
+        - containerPort: 3306
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: secret
+
+# MYSQL需要設定root的password，如果沒有設定會噴錯誤，如下...
+# error: database is uninitialized and password option is not specified
+#   You need to specify one of MYSQL_ROOT_PASSWORD, MYSQL_ALLOW_EMPTY_PASSWORD and MYSQL_RANDOM_ROOT_PASSWORD
