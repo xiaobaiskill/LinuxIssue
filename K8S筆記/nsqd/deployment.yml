@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nsqd-deployment
+  labels:
+    app: nsqd
+spec:
+  selector:
+    matchLabels:
+      app: nsqd
+  template:
+    metadata:
+      labels:
+        app: nsqd
+    spec:
+      hostNetwork: false # 
+      containers:
+      - name: nsqd
+        image: nsqio/nsq:latest
+        imagePullPolicy: Always # 當有新的映像檔更新時會自動去拉映像檔的功能
+        ports:
+          - containerPort: 4150
+            hostPort: 4150
+          - containerPort: 4151
+            hostPort: 4151
+        env:
+        - name: NSQLOOKUP_ADDRESS
+          value: nsqlookup.default.svc.cluster.local
+        - name: NSQ_BROADCAST_ADDRESS
+          value: nsqd.default.svc.cluster.local
+        command: ["/nsqd"]
+        args: ["--lookupd-tcp-address=$(NSQLOOKUP_ADDRESS):4160", "--broadcast-address=$(NSQ_BROADCAST_ADDRESS)"]
