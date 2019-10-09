@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nsqadmin-deployment
+  labels:
+    app: nsqadmin
+spec:
+  selector:
+    matchLabels:
+      app: nsqadmin
+  template:
+    metadata:
+      labels:
+        app: nsqadmin
+    spec:
+      hostNetwork: false # 
+      containers:
+      - name: nsqadmin
+        image: nsqio/nsq:latest
+        imagePullPolicy: Always # 當有新的映像檔更新時會自動去拉映像檔的功能
+        ports:
+          - containerPort: 4171
+            hostPort: 4171
+          - containerPort: 4170
+            hostPort: 4170      
+        env:
+        - name: NSQLOOKUP_ADDRESS
+          value: nsqlookup.default.svc.cluster.local
+        - name: NSQ_BROADCAST_ADDRESS
+          value: nsqd.default.svc.cluster.local
+        command: ["/nsqadmin"]
+        # args: ["--lookupd-http-address=$(NSQLOOKUP_ADDRESS):4161"] #, "--broadcast-address=$(NSQ_BROADCAST_ADDRESS)"]
+        # 仍然有問題，對於無法找到nsqd
+        args: ["--lookupd-http-address=nsqlookupd-service:4161" ] #, "--nsqd-http-address=nsqd-service:4151"]
+        # args: ["--nsqd-http-address=nsqd-service:4151"]

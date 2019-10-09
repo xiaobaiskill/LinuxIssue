@@ -1,0 +1,18 @@
+# registry producer or consumer with nsqlookupd instead of nsqd
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nsqadmin-service
+  labels:
+    app: nsqadmin
+spec:
+  type: LoadBalancer # use extenal IP
+  # type: NodePort # use NAT inside k8s
+  selector:
+    app: nsqadmin
+  ports:
+    - name: http
+      protocol: TCP
+      port: 4171
+      targetPort: 4171
