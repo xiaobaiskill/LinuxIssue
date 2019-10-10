@@ -17,10 +17,10 @@ spec:
         backend:
           serviceName: adminer-service
           servicePort: 8080
-      - path: /redisc
-        backend:
-          serviceName: redis-commander-service
-          servicePort: 8081
+      # - path: /redisc
+      #   backend:
+      #     serviceName: redis-commander-service
+      #     servicePort: 8081
 
 
 # refer notes:

@@ -5,8 +5,9 @@ metadata:
   labels:
     app: nsqlookupd
 spec:
+  clusterIP: None # 不使用NAT IP
   # type: LoadBalancer # use extenal IP
-  type: NodePort # use NAT inside k8s
+  # type: NodePort # use NAT inside k8s
   selector:
     app: nsqlookupd
   ports:

@@ -19,7 +19,7 @@ spec:
         image: nsqio/nsq:latest
         imagePullPolicy: Always # 當有新的映像檔更新時會自動去拉映像檔的功能
         command: ["/nsqlookupd"]
-        args: ["--broadcast-address=nsqlookup.default.svc.cluster.local"]
+        args: ["--broadcast-address=nsqlookupd-service.default.svc.cluster.local"]
         ports:
         - containerPort: 4161
           hostPort: 4161

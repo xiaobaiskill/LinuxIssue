@@ -8,6 +8,7 @@ spec:
   # externalTrafficPolicy: Cluster # comment out this to use ingress instead of service
   # type: LoadBalancer # use extenal IP
   type: NodePort # use NAT inside k8s
+  # clusterIP: None
   selector:
     app: adminer
   ports:
