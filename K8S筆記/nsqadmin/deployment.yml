@@ -29,7 +29,16 @@ spec:
         - name: NSQ_BROADCAST_ADDRESS
           value: nsqd.default.svc.cluster.local
         command: ["/nsqadmin"]
-        # args: ["--lookupd-http-address=$(NSQLOOKUP_ADDRESS):4161"] #, "--broadcast-address=$(NSQ_BROADCAST_ADDRESS)"]
-        # 仍然有問題，對於無法找到nsqd
-        args: ["--lookupd-http-address=nsqlookupd-service:4161" ] #, "--nsqd-http-address=nsqd-service:4151"]
+        # args: ["--lookupd-http-address=$(NSQLOOKUP_ADDRESS):4161"] #, "--broadcast-address=$(NSQ_BROADCAST_ADDRESS)"] # 無法解析...回報錯誤
+        # args: ["--lookupd-http-address=nsqlookup.default.svc.cluster.local:4161" ] # 無法解析...回報錯誤
+        # args: ["--lookupd-http-address=nsqlookupd-service:4161", "--nsqd-http-address=nsqd-service:4151"] # 兩個參數只能選一個用...
+        # 仍然有問題，對於無法找到nsqd ...
+        # args: ["--lookupd-http-address=nsqlookupd-service:4161" ]
         # args: ["--nsqd-http-address=nsqd-service:4151"]
+        # args: ["--lookupd-http-address=nsqlookupd-service:4161", "--nsqd-http-address=nsqd-service:4151"]
+        # 嘗試直接給內網IP仍舊會有問題...
+        # args: ["--lookupd-http-address=10.0.21.196:4161" ]
+        # args: ["--nsqd-http-address=10.0.29.43:4151"]
+
+# TODO:
+# 解決nsqd跟nsqlookupd之間的溝通問題...        

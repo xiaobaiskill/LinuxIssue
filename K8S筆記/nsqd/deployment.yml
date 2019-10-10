@@ -30,3 +30,4 @@ spec:
           value: nsqd.default.svc.cluster.local
         command: ["/nsqd"]
         args: ["--lookupd-tcp-address=$(NSQLOOKUP_ADDRESS):4160", "--broadcast-address=$(NSQ_BROADCAST_ADDRESS)"]
+        # args: ["--lookupd-tcp-address=nsqlookupd-service:4160", "--broadcast-address=$(NSQ_BROADCAST_ADDRESS)"] # nsqlookupd 找不到nsqd...尚待解決...
