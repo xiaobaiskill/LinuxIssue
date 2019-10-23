@@ -1,0 +1,143 @@
+// 記錄以前撰寫的Jenkinsfile...痛苦的groove語法
+pipeline {
+    agent any
+    environment{
+        SERVICE = "captcha"
+        UATGCR = "asia.gcr.io/uat-env-888888"
+        PRDGCR = "asia.gcr.io/mlytics-174006"
+        UATGCR_CRD = "gcr:uat-gcr"
+        PRDGCR_CRD = "gcr:prd-gcr"
+    }
+    parameters {
+        string(name: 'VERSION', defaultValue:'v0.1.4', description:'service version')
+        string(name: 'EnterPrdGcr', defaultValue:'Yes', description:'Change this parameters to push image into prd')
+    }
+
+     stages {
+        stage('Build') {
+            steps {
+                // use Jenknisfile direct syntax                
+                script{
+                    gitTag = sh(returnStdout: true, script: 'git tag --sort version:refname | tail -1')
+                    tag = check_serviceTag(gitTag, params.VERSION)                    
+                }
+                start_service_images(tag)
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+	        }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+                finish_service_images(tag)
+                deleteDir()
+            }
+        }
+    }
+}
+
+def tag_service_images(String tag=''){
+    sh "sudo docker tag ${env.UATGCR}/${env.SERVICE}:${tag} ${env.PRDGCR}/${env.SERVICE}:${tag}"
+}
+
+def start_service_images(String tag=''){
+    if(params.EnterPrdGcr=="Yes"){
+        echo "params EnterPrdGcr is ${params.EnterPrdGcr} so that gonna to pull service ${env.UATGCR}/${env.SERVICE}:${tag}"
+        pull_service(env.SERVICE, tag, env.UATGCR, env.UATGCR_CRD)
+        tag_service_images(tag)
+    }else{
+        echo "params EnterPrdGcr is ${params.EnterPrdGcr} so that gonna to build service ${env.UATGCR}/${env.SERVICE}:${tag}"
+        build_service(env.SERVICE, tag, env.UATGCR, "--build-arg configenv=uat -f Dockerfile .")
+    }
+}
+
+def finish_service_images(String tag=''){
+    if(params.EnterPrdGcr=="No"){
+        echo "gonna to deploy local images ${env.UATGCR}/${env.SERVICE}:${tag}"
+        echo "... do nothing !"
+        
+        echo "gonna to delete local images ${env.UATGCR}/${env.SERVICE}:${tag}"
+        delete_service(env.SERVICE, tag, env.UATGCR)
+
+    }else{
+        echo "change uat tag to prd tag"
+        tag_service_images(tag)
+
+        echo "gonna to deploy local images ${env.PRDGCR}/${env.SERVICE}:${tag}"
+        echo "... do nothing !"
+
+        echo "gonna to delete local images ${env.PRDGCR}/${env.SERVICE}:${tag}"
+        delete_service(env.SERVICE, tag, env.PRDGCR)
+
+        echo "gonna to delete local images ${env.UATGCR}/${env.SERVICE}:${tag}"
+        delete_service(env.SERVICE, tag, env.UATGCR)
+    }
+}
+
+def check_serviceTag(String auto_tag = '', String manual_tag = ''){
+    if (manual_tag==''){
+        return auto_tag
+    }else{
+        if (auto_tag==manual_tag){
+            echo "auto_tag:${auto_tag} is the same as manual_tag:${manual_tag}"
+        }else{
+            echo "auto_tag:${auto_tag} is different with manual_tag:${manual_tag}"
+        }
+        return manual_tag
+    }
+}
+
+def pull_service(String name = '',String tag = '', String gcrloc = '', String gcr_cred = '') {
+    if (name == ''||tag == '' || gcrloc == '' || gcr_cred == ''){
+        echo "Lack information to deploy service"
+    }else{
+        echo "gonna pull service ${gcrloc}/${name}:${tag}"
+
+        withDockerRegistry([credentialsId: gcr_cred, url: 'https://asia.gcr.io']){
+            sh "docker pull ${gcrloc}/${name}:${tag}"
+        }
+    }
+}
+
+def build_service(String name = '',String tag = '', String gcrloc = '', String loc = '-f Dockerfile .') {
+    if (name == ''||tag == '' || gcrloc == '' || loc == ''){
+        echo "Lack information to build service"
+    }else{
+        echo "gonna build service ${gcrloc}/${name}:${tag}"
+        try{
+            sh "sudo docker build ${loc} -t ${gcrloc}/${name}:${tag}"
+        }
+        catch(err){
+            throw err
+        }
+    }
+}
+
+def deploy_service(String name = '',String tag = '', String gcrloc = '', String gcr_cred = '') {
+    if (name == ''||tag == '' || gcrloc == '' || gcr_cred == ''){
+        echo "Lack information to deploy service"
+    }else{
+        echo "gonna deploy service ${name}:${tag}"
+
+        withDockerRegistry([credentialsId: gcr_cred, url: 'https://asia.gcr.io']){
+            sh "docker push ${gcrloc}/${name}:${tag}"
+        }
+    }
+}
+
+def delete_service(String name = '',String tag = '', String gcrloc = ''){
+    if (name == ''||tag == '' || gcrloc == ''){
+        echo "please insert a valid service name to delete service"
+    }else{
+        echo "gonna delete service ${name}:${tag}"
+        try{
+            sh "sudo docker rmi ${gcrloc}/${name}:${tag}"
+        }
+        catch(err){
+            throw err
+        }
+    }
+}
