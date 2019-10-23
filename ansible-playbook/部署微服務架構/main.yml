@@ -1,0 +1,4 @@
+---
+- hosts: microservice
+  roles:
+    - service/micro_service1

@@ -1,0 +1,11 @@
+[test-server-label]
+test-server1
+
+[microhost-test]
+microhost1
+
+[microservice:children]
+microhost-test
+
+[echo_test]
+localhost host_key_checking=False

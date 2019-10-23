@@ -1,0 +1,4 @@
+---
+- name: echo docker push
+  shell: |
+    echo "docker image was push"

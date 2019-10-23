@@ -1,0 +1,4 @@
+---
+- name: echo alerts
+  shell: |
+    echo "slack alerts was sent"

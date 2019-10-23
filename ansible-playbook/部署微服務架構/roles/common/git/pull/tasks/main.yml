@@ -1,0 +1,4 @@
+---
+- name: echo git pull
+  shell: |
+    echo "git repo was pull"

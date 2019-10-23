@@ -1,0 +1,4 @@
+---
+- name: echo docker pull
+  shell: |
+    echo "docker image was pull"

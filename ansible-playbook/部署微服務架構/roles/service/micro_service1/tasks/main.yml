@@ -1,0 +1,20 @@
+---
+- name: echo this service
+  command: echo "micro_service1"
+  register: service
+
+- name: clone git repo
+  import_role:
+    name: common/git/pull
+
+- name: build service
+  import_role:
+    name: common/docker/image/build
+
+- name: push service
+  import_role:
+    name: common/docker/image/push
+
+- name: slack_alert
+  import_role:
+    name: common/alerts/slack_alert

@@ -1,0 +1,4 @@
+---
+- name: echo docker build
+  shell: |
+    echo "docker image was built"

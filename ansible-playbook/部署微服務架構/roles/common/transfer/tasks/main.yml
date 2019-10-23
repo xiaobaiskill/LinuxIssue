@@ -1,0 +1,8 @@
+---
+# pass key to dest vm
+- name: copy file to dest vm
+  copy:
+    src: "roles/common/files/{{ item.src }}"
+    dest: "/tmp/{{ item.dest }}"
+  with_items:
+    - { src: "specific.pem", dest: "key" }
