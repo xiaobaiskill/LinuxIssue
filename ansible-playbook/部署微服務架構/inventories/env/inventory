@@ -8,4 +8,4 @@ microhost1
 microhost-test
 
 [echo_test]
-localhost host_key_checking=False
+localhost

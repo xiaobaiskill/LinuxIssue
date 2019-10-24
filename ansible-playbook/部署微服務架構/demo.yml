@@ -1,0 +1,4 @@
+---
+- hosts: echo_test
+  roles:
+    - service/micro_service1
