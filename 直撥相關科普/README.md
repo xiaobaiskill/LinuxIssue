@@ -81,5 +81,15 @@ rtmp-publisher -> rtmp-server -> rtmp-client
 
 ### 執行步驟
 1. 使用`docker-compose up -d`帶起rtmp-server做服務
-2. 打開OBS: 設定 1.輸入源 2.輸出源 3.選擇串流位置為本機`rtmp://127.0.0.1:1935/live/`，輸入密鑰`123`
+2. 打開OBS: 設定 1.設定輸入源為螢幕擷取畫面 2.選擇串流位置為本機`rtmp://127.0.0.1:1935/live/`，輸入密鑰`123`
 3. 打開VLC: 設定 1.接串流位置`rtmp://127.0.0.1:1935/live/123`
+
+# 註解
+2-1: 設定OBS輸入源為`擷取螢幕輸入`
+![image](https://github.com/jim0409/LinuxIssue/blob/master/%E7%9B%B4%E6%92%A5%E7%9B%B8%E9%97%9C%E7%A7%91%E6%99%AE/obs%E6%96%B0%E5%A2%9E%E8%BC%B8%E5%85%A5%E6%BA%90.png)
+
+2-2: 設定OBS輸出位置為rtmp-server `rtmp://127.0.0.1:1935/live`，夾帶密鑰`123`
+![image](https://github.com/jim0409/LinuxIssue/blob/master/%E7%9B%B4%E6%92%A5%E7%9B%B8%E9%97%9C%E7%A7%91%E6%99%AE/obs%E8%A8%AD%E5%AE%9A%E4%B8%B2%E6%B5%81%E9%80%A3%E6%8E%A5%E4%BD%8D%E7%BD%AE.png)
+
+2-3: 設定VLC接串流位置`rtmp://127.0.0.1:1935/live/123`
+![image](https://github.com/jim0409/LinuxIssue/blob/master/%E7%9B%B4%E6%92%A5%E7%9B%B8%E9%97%9C%E7%A7%91%E6%99%AE/vlc%E8%A8%AD%E5%AE%9A%E6%8E%A5%E5%85%A5%E4%B8%B2%E6%B5%81.png)
