@@ -9,5 +9,6 @@ services:
      networks:
        - proxynet
      image: tiangolo/nginx-rtmp
+     container_name: rtmpserver
      ports:
        - "1935:1935"
