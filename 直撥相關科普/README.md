@@ -65,3 +65,21 @@ rtmp-publisher -> rtmp-server -> rtmp-client
 使用obs教學...obs對於平常沒有在玩影音視頻的初學者真的UI/UX設計超級不友善...最後是看到這張圖檔才知道設定位置...
 - file:///Users/jhenhuei/Downloads/%E9%81%94%E5%AD%B8%E5%A0%82-%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8A(%E7%9B%B4%E6%92%AD).pdf
 - http://www.eyeweb.com.tw/archives/3539
+
+
+# docker-compose
+- https://hub.docker.com/r/tiangolo/nginx-rtmp/
+
+
+
+# 如何使用docker帶起一個rtmp-server
+### 預先安裝相關軟體
+1. docker
+2. docker-compose
+3. OBS : https://obsproject.com/download
+4. VLC : https://www.videolan.org/vlc/download-macosx.html
+
+### 執行步驟
+1. 使用`docker-compose up -d`帶起rtmp-server做服務
+2. 打開OBS: 設定 1.輸入源 2.輸出源 3.選擇串流位置為本機`rtmp://127.0.0.1:1935/live/`，輸入密鑰`123`
+3. 打開VLC: 設定 1.接串流位置`rtmp://127.0.0.1:1935/live/123`
