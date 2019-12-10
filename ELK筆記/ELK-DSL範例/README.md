@@ -1,7 +1,7 @@
 # 筆記一些我在查詢log時候用的DSL
 
 # query upstream time
-```
+```sh
 GET /waf-*/_search
 {
  "size": 0,
@@ -53,3 +53,9 @@ GET /waf-*/_search
 
 ### reference:
 http://www.youmeek.com/elasticsearch-dsl/
+
+
+### extend-refer:
+- https://strconv.com/posts/use-elastic/
+- https://olivere.github.io/elastic/
+- https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html
